@@ -13,4 +13,9 @@ export class ProductServiceService {
   addProduct(product: Product): Observable<any> {
     return this.http.post('http://localhost:7772/product', product, { responseType: 'text' });
   }
+
+  editProduct(product:Product):Observable<any>{
+    console.log('http://localhost:7772/product/'+ product.getProductd());
+    return this.http.put('http://localhost:7772/product',product,{responseType:'text'});
+  }
 }

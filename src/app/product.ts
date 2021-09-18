@@ -4,4 +4,8 @@ export class Product {
     private starRating: number;
     private description: String;
     private productName: String;
+
+    public getProductd():number{
+        return this.productId;
+    }
 }
