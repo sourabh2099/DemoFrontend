@@ -1,38 +1,40 @@
 <section class="col-4 mx-auto">
   <div class=" text-center">
-   <h3>Enter Product Details</h3> 
+    <h3>Enter Product Details</h3>
   </div>
-  <form #frm = "ngForm">
+  <form #frm = "ngForm" (ngSubmit)="add()">
     <div class="mx-auto">
       <div class="form-row" style="display: flex;">
         <div class="form-group mx-3">
           Product Id
-          <input type="number" class="form-control" id="productId" [(ngModel)] = "" placeholder="Enter productId" required/>
+          <input type="number" class="form-control" name="productId" [(ngModel)]="product.productId"
+            placeholder="Enter productId" required />
         </div>
         <div class="form-group mx-3">
           Price
-          <input type="number" class="form-control" id="price" placeholder="Price" required/>
+          <input type="number" class="form-control" name="price" [(ngModel)]="product.price" placeholder="Price"
+            required />
         </div>
       </div>
       <div class="form-group mx-3">
         Star Rating <br>
-        <input type="radio" name="rating" value="1">1
-        <input type="radio" style="margin-left: 10px;" name="rating" value="2">2
-        <input type="radio" style="margin-left: 10px;" name="rating" value="3">3
-        <input type="radio" style="margin-left: 10px;" name="rating" value="4">4
-        <input type="radio" style="margin-left: 10px;" name="rating" value="5">5
+        <input type="radio" name="rating" value= 1 [(ngModel)]="product.starRating" />1
+        <input type="radio" style="margin-left: 10px;" [(ngModel)]="product.starRating" name="rating" value= 2/>2
+        <input type="radio" style="margin-left: 10px;" [(ngModel)]="product.starRating" name="rating" value= 3/>3
+        <input type="radio" style="margin-left: 10px;" [(ngModel)]="product.starRating" name="rating" value= 4/>4
+        <input type="radio" style="margin-left: 10px;" [(ngModel)]="product.starRating" name="rating" value= 5/>5
       </div>
       <div class="form-group mx-3">
         Desciption
-        <input type="text" class="form-control" id="Description" placeholder="Enter product Desciption" required/>
+        <input type="text" class="form-control" name="Description" [(ngModel)] = "product.description" placeholder="Enter product Desciption" required />
       </div>
       <div class="">
         <div class="form-group mx-3">
           Product Name
-          <input type="text" class="form-control" id="productName" placeholder="Enter product Name" required/>
+          <input type="text" class="form-control" name="productName" [(ngModel)] = "product.productName" placeholder="Enter product Name" required />
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-outline-primary mx-3 " [disabled] = "!frm.valid">Register Product</button>
+    <button type="submit" class="btn btn-primary mx-3 ">Register Product</button>
   </form>
 </section>
