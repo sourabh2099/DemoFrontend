@@ -6,19 +6,25 @@
 </head>
 
 <body>
-  <div style="background-color: rgb(141, 185, 250);">
-    <div class="text-center"><b>{{title}}</b></div>
+  <div style="background-color: rgb(83, 118, 182);display: flex;">
+    <div class="" style="color: aliceblue;
+    margin-left: 50px;
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"
+    >
+      <button class="btn" routerLink="home"><h1 style="color: white;">{{title}}</h1></button>
+    </div>
+    <div style="color: white; margin-left: 50%;" >{{date   | date: "mm-dd-yyyy"}} {{date   | date: "HH:mm:ss"}}</div>
   </div>
-  <div style="display:flex;" class="mx-auto">
-    <nav class="navbar bg-light">
-      <div class="btn btn-grey m-1"> <a routerLink="addProduct">Add product</a></div>
-      <div class="btn btn-grey m-1"> <a routerLink="editProduct">Edit Product</a></div>
-      <div class="btn btn-grey m-1"> hello</div>
-      <div class="btn btn-grey m-1"> hello</div>
+  <div style="display:flex; background-color: antiquewhite;" class="mx-auto">
+    <nav class="navbar mx-auto">
+      <div style="margin-right:20px; margin-left: 20px;"> <button class="btn" routerLink="addProduct">Add
+          product</button></div>
+      <div class=" m-1"> <button class="btn" routerLink="editProduct">Edit Product</button></div>
+      <div class=""> <button class="btn" routerLink="editProduct">Link2</button></div>
+      <div class=""> <button class="btn" routerLink="editProduct">Link3</button></div>
     </nav>
   </div>
-
-
 </body>
 <router-outlet></router-outlet>
 

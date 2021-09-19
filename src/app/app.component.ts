@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Flipkart';
+  date:Date; 
+  constructor(){
+    setInterval(() => {
+      this.date = new Date()
+    }, 1000)
+  }
 }
